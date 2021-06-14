@@ -2,6 +2,15 @@ html {
   font-size: 62.5%; /*10px*/
 }
 
+/* 
+======================
+Colors used
+primary: #fcd900 : nav backgound
+sec: #8a6300
+ter: #481e00
+
+*/
+
 body {
   padding: 0;
   margin: 0;
@@ -20,7 +29,7 @@ h2 {
 
 h2::after {
   content: "";
-  background-color: coral;
+  background-color: #8a6300;
   width: 10rem;
   height: 0.5rem;
   border-radius: 0.5rem;
@@ -31,7 +40,7 @@ h2::after {
 }
 
 h3 {
-  color: #333;
+  color: #999;
   text-align: center;
   font-size: 2.5rem;
 }
@@ -46,10 +55,6 @@ header {
   z-index: 10000;
 }
 
-.zmdi-shopping-cart {
-  font-size: 3rem;
-}
-
 /* navigation */
 nav {
   position: fixed;
@@ -59,7 +64,7 @@ nav {
   top: 0;
   padding: 0 5%;
   height: 100px;
-  background-color: rgba(255, 255, 255, 0.719);
+  background-color: #fcd900;
 }
 nav .logo {
   float: left;
@@ -72,7 +77,7 @@ nav .logo {
 }
 nav .logo img {
   margin-left: 0.5rem;
-  width: 50%;
+  width: 30%;
 }
 
 nav .links {
@@ -93,7 +98,7 @@ nav .links a {
   padding: 1em;
   font-size: 16px;
   font-weight: bold;
-  color: tomato;
+  color: #481e00;
   text-decoration: none;
 }
 #nav-toggle {
@@ -110,35 +115,45 @@ nav .icon-burger {
 nav .icon-burger .line {
   width: 30px;
   height: 5px;
-  background-color: tomato;
+  background-color: #481e00;
   margin: 5px;
   border-radius: 3px;
   transition: all 0.3s ease-in-out;
 }
 
-/* BUTTONS SECTION */
+/* ==========================
+BUTTONS SECTION 
+=============================
+*/
 .btn {
   border-radius: 5rem;
   background-color: aliceblue;
-  border: 0.1rem coral solid;
+  border: 0.1rem #481e00 solid;
   padding: 1.5rem;
   transition: all 300ms ease-in-out;
   text-decoration: none;
   font-size: 2.5rem;
   margin: 2rem;
-  /* width: 100%; */
 }
 
 .btn:hover {
-  background-color: coral;
+  background-color: #481e00;
   color: aliceblue;
 }
 
-/* slider section */
+/*============================ 
+slider section 
+==============================
+*/
 .zn_mwrap {
   overflow-x: hidden;
-  margin-top: 19.9rem;
+  margin-top: 10rem;
 }
+
+.zn_section_slider {
+  height: 20%;
+}
+
 .header_slider {
   position: relative;
   width: 500%;
@@ -146,9 +161,11 @@ nav .icon-burger .line {
   left: 0;
   animation: 20s slider infinite;
 }
-.header_slider img {
+.header_slider .bgslider {
   width: 20%;
+  height: 55rem;
   float: left;
+  margin-bottom: 3rem;
 }
 
 @keyframes slider {
@@ -181,6 +198,106 @@ nav .icon-burger .line {
   }
 }
 
+/* 
+============================
+intro section
+============================
+*/
+
+.keycode__info {
+  display: grid;
+  background: aliceblue;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 0.4rem;
+  text-align: center;
+  box-shadow: 0 0.1rem 0.2rem rgba(0, 0, 0, 0.75);
+}
+
+.keycode__info p {
+  font-size: 1.9rem;
+  line-height: 2.6rem;
+  color: #8a6300;
+}
+
+/* 
+==========================
+PROMO SECTION
+==========================
+*/
+
+.tabs {
+  background: rgba(54, 54, 54, 0.75);
+  margin: 2rem;
+  padding: 1rem;
+  border-radius: 0.4rem;
+}
+.tabs:hover {
+  background: aliceblue;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.75);
+  transition: all 0.5s;
+}
+
+.tab__content:hover {
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.75);
+  transition: all 0.5s;
+}
+
+.tab__content {
+  background: white;
+  padding: 1rem;
+  border-radius: 0.4rem;
+}
+
+[role="tablist"] {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  column-gap: 0.1rem;
+}
+
+.tab__content button {
+  background: rgba(0, 0, 0, 0.75);
+  border: 0;
+  color: white;
+  border-radius: 0.4rem 0.4rem 0 0;
+  cursor: pointer;
+  padding: 1rem;
+}
+.tab__content button[aria-selected="true"] {
+  box-shadow: none;
+  color: black;
+}
+
+.tab__content button:hover {
+  background: aliceblue;
+  color: black;
+  transition: all 0.4s;
+}
+.tab__content button:focus {
+  outline: 0;
+}
+
+.tabpanel_inner {
+  display: flex;
+  flex-direction: row;
+  margin: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.tabpanel_inner img {
+  width: 40%;
+  border-radius: 1rem;
+}
+
+.desc p {
+  width: 90%;
+}
+
+/* END PROMO */
+
 /* FOOTER SECTION */
 
 .zn_section.footer {
@@ -193,33 +310,32 @@ nav .icon-burger .line {
 .footer_row {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   flex-grow: 1;
   margin: 0 auto;
+  text-align: center;
 }
-
+/* 
 .footer_row_col {
   width: 20%;
-}
+} */
 
 .applay {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
 }
 .footer_row .applay img {
-  width: 40%;
+  width: 30%;
   margin: 1rem;
 }
 
 .footer_row_col.logo img {
-  width: 80%;
-}
-
-.footer_row_col ul li {
-  list-style: none;
-  line-height: 2.2rem;
+  margin: 1rem;
+  width: 30%;
+  border-bottom-left-radius: 50%;
+  border-top-right-radius: 50%;
 }
 
 /* media querry */

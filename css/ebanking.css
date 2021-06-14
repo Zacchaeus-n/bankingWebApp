@@ -1,0 +1,84 @@
+.header_image {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+}
+.header_image img {
+  width: 20%;
+  height: 55rem;
+  float: left;
+  margin-bottom: 3rem;
+}
+
+/* about us */
+
+.terms__wrapper {
+  display: grid;
+  padding: 2rem;
+  text-align: center;
+  background-color: aliceblue;
+}
+.terms__wrapper__hr,
+h4 {
+  margin-bottom: 2rem;
+  color: #8a6300;
+  font-size: 2.4rem;
+}
+.historyd {
+  background: #8a6300;
+  box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.75);
+  height: 30rem;
+  padding: 2rem 2rem 0 2rem;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+  margin-bottom: 3rem;
+}
+
+.historyd p {
+  line-height: 1.5;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  color: aliceblue;
+}
+
+#deposit {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form input {
+  outline: none;
+  padding: 0.6rem;
+  width: 50rem;
+  border-radius: 1rem;
+  border: none;
+  margin: 1.6rem;
+}
+
+/* FOOTER SECTION */
+
+.zn_section.footer {
+  background-color: #333;
+  color: aliceblue;
+  font-size: 1.3rem;
+  padding: 6rem 2rem;
+}
+
+.footer_row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-grow: 1;
+  margin: 0 auto;
+  text-align: center;
+}

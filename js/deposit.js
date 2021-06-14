@@ -1,10 +1,44 @@
 /**
+ * ====================================
+ * SELECTING DOM ELEMENTS
+ * ====================================
+ */
+const tabs = document.querySelector(`.tabs`);
+const tabBtns = tabs.querySelectorAll(`[role="tab"]`);
+
+/**
+ * ====================================
+ * PROMO TABING
+ * ====================================
+ */
+
+const tabPanels = Array.from(tabs.querySelectorAll(`[role="tabpanel"]`));
+
+function handleTabClick(e) {
+  //hide all tabs panels
+  tabPanels.forEach((tabPanel) => (tabPanel.hidden = true));
+  //mark all tabs as unselected
+  tabBtns.forEach((tab) => tab.setAttribute(`aria-selected`, false));
+  //mark the clicked tab as selected
+  e.currentTarget.setAttribute(`aria-selected`, true);
+  //find the associated tabPanel and show it
+  const { id } = e.currentTarget;
+
+  const tabPanel = tabPanels.find(
+    (panel) => panel.getAttribute(`aria-labelledby`) === id
+  );
+  tabPanel.hidden = false;
+}
+
+tabBtns.forEach((tabBtn) => tabBtn.addEventListener(`click`, handleTabClick));
+
+/**
  * =========================
  * DEPOSIT CALCULATION
  * =========================
  */
 
-// const calculate = document.getElementsByTagName("button");
+let calculate = document.querySelector(".calculate");
 console.log(calculate);
 calculate.addEventListener("click", function calculator(e) {
   //prevent default propagation of form click event

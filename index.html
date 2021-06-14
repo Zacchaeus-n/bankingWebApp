@@ -1,3 +1,5 @@
+<!-- References :  Ecobank, https://smashinglogo.com/---for logos,
+ cdnjs.cloudflare.com---for icons, W3schools, MDN, Youtube, -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,7 +10,7 @@
     <!-- favicon -->
     <link
       rel="shortcut icon"
-      href="assets/images/favicon.svg"
+      href="assets/images/favicon.PNG"
       type="image/x-icon"
     />
     <!-- zmdi icons -->
@@ -40,13 +42,112 @@
     </header>
 
     <div class="zn_mwrap">
-      <div class="zn_section slider">
+      <div class="zn_section_slider">
         <div class="header_slider">
-          <img src="assets/images/slider1.png" alt="slider1" />
-          <img src="assets/images/slider2.png" alt="slider2" />
-          <img src="assets/images/slider3.jpg" alt="slider3" />
-          <img src="assets/images/slider4.png" alt="slider4" />
-          <img src="assets/images/slider5.jpg" alt="slider5" />
+          <div class="slider1 slider">
+            <img
+              class="bgslider"
+              src="assets/images/slider1.png"
+              alt="slider1"
+            />
+          </div>
+          <div class="slider2 slider">
+            <img
+              class="bgslider"
+              src="assets/images/slider2.png"
+              alt="slider2"
+            />
+          </div>
+          <div class="slider3 slider">
+            <img
+              class="bgslider"
+              src="assets/images/slider3.jpg"
+              alt="slider3"
+            />
+          </div>
+          <div class="slider4 slider">
+            <img
+              class="bgslider"
+              src="assets/images/slider4.png"
+              alt="slider4"
+            />
+          </div>
+          <div class="slider5 slider">
+            <img
+              class="bgslider"
+              src="assets/images/slider5.jpg"
+              alt="slider5"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="intro_section">
+        <h2>Continental Bank | CBank</h2>
+        <div class="keycode__info">
+          <p>
+            An Inter-Continental Bank with 150 years of banking. Same business
+            culture around the globe. Providing a wide variety of services to
+            our clients. Our products includes, but not limited to: Transaction
+            Banking, cash management services, Trade Finance, Business Finance
+            and Corporate Finance (including Corporate Advisory, Project &
+            Export Finance, Structured Trade Finance, Structured Finance). These
+            services are offered from our local expertise based on global
+            insights.
+          </p>
+        </div>
+      </div>
+
+      <!-- Promo section -->
+      <div class="tabs">
+        <div class="tab__content">
+          <div role="tablist" aria-label="Programming Languages">
+            <button role="tab" aria-selected="true" id="world">
+              Bank From Everywhere
+            </button>
+            <button role="tab" aria-selected="false" id="mer">
+              Merchant Loans
+            </button>
+            <button role="tab" aria-selected="false" id="std">
+              Student Loans
+            </button>
+          </div>
+          <div class="tabpanels" role="tabpanel" aria-labelledby="world">
+            <div class="tabpanel_inner">
+              <div class="desc">
+                <h2>Bank From Everywhere</h2>
+                <p>
+                  Have access to your money from around the world. No need to
+                  carry cash around.
+                </p>
+              </div>
+              <img src="assets/images/monylaptop.png" alt="world" />
+            </div>
+          </div>
+          <div class="tabpanel2" role="tabpanel" aria-labelledby="mer" hidden>
+            <div class="tabpanel_inner">
+              <div class="desc">
+                <h2>Merchant Loans</h2>
+                <p>
+                  Flexible Loans available for dream business, home, trips and
+                  more. We got your back.
+                </p>
+              </div>
+              <img src="assets/images/gold.png" alt="gold" />
+            </div>
+          </div>
+          <div class="tabpanel3" role="tabpanel" aria-labelledby="std" hidden>
+            <div class="tabpanel_inner">
+              <div class="desc">
+                <h2>Student Loan</h2>
+                <p>
+                  Interest Free Loan facility. For your dream study plays. Bring
+                  the to life.
+                </p>
+              </div>
+              <img src="assets/images/student.png" alt="student" />
+            </div>
+          </div>
         </div>
       </div>
 
@@ -54,7 +155,7 @@
       <div class="zn_section footer">
         <div class="footer_row">
           <div class="footer_row_col">
-            <h3>Download Our App</h3>
+            <h3>Download Our eBanking App</h3>
             <p>Get your Copy for Android and IOS Mobile Phones</p>
             <span class="applay">
               <img src="assets/images/app-store.png" alt="app-store" />
@@ -63,19 +164,13 @@
           </div>
           <div class="footer_row_col logo">
             <h3>Mission and Value</h3>
-            <p>Providing quality services for many around the globe</p>
-            <img src="assets/images/logo.svg" alt="logo" />
+            <p>Providing quality banking experience for years.</p>
+            <img src="assets/images/cbank.PNG" alt="logo" />
           </div>
         </div>
       </div>
     </div>
 
-    <!-- jquery -->
-    <script
-      src="https://code.jquery.com/jquery-3.6.0.min.js"
-      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-      crossorigin="anonymous"
-    ></script>
     <!-- custom js -->
     <script src="js/script.js"></script>
   </body>
